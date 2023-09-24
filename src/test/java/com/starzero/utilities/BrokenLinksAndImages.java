@@ -53,6 +53,7 @@ public class BrokenLinksAndImages extends BaseClass{
 			connection.disconnect();
 			logger.info("URL"+activeImages.get(i).getAttribute("href")+" Response Code=====> "+responseCode+" Response Message=====> "+responseMessage);
 		}
+		
 	}
 
 }
