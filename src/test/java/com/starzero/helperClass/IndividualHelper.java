@@ -5,17 +5,16 @@ import org.testng.Assert;
 
 import com.starzero.pageActions.PageActions;
 import com.starzero.pageObjects.IndividualPage;
-import com.starzero.pageObjects.PlansPage;
 
 public class IndividualHelper extends IndividualPage {
 
 	public IndividualHelper(WebDriver driver) {
 		super(driver);
 	}
+	
 
-	public void videoHeading() {
+	public void visiblityOfVedioHeading() {
 		try {
-
 			Assert.assertTrue(PageActions.isDisplayedInUI(headingTrack),"Track is not displayed in UI");
 			Assert.assertTrue(PageActions.isDisplayedInUI(headingAssess),"Assess is not displayed in UI");
 			Assert.assertTrue(PageActions.isDisplayedInUI(headingOffset),"Offset is not displayed in UI");
@@ -31,7 +30,7 @@ public class IndividualHelper extends IndividualPage {
 	
 	public void clickSubscribeNowbtn() {
 		try {
-			PageActions.clickElement(subscribeNowbtn);
+			action.clickElement(subscribeNowbtn,driver);
 		}catch(Exception e)
 		{
 			e.printStackTrace();

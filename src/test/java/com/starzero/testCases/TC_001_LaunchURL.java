@@ -12,7 +12,7 @@ public class TC_001_LaunchURL extends BaseClass{
 	public void validateLandingPage() throws Exception {
 		
 		IndividualHelper ih = new IndividualHelper(driver);
-		ih.videoHeading();
+		ih.visiblityOfVedioHeading();
 		ih.clickSubscribeNowbtn();
 		
 		PlansPageHelper pp = new PlansPageHelper(driver);

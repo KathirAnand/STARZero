@@ -2,7 +2,6 @@ package com.starzero.helperClass;
 
 import org.openqa.selenium.WebDriver;
 
-import com.starzero.pageActions.PageActions;
 import com.starzero.pageObjects.PlansPage;
 
 public class PlansPageHelper extends PlansPage {
@@ -13,7 +12,7 @@ public class PlansPageHelper extends PlansPage {
 
 	public void clickDropdown() {
 		try {
-		PageActions.clickElement(dropDown);
+		action.clickElement(dropDown,driver);
 		}catch(Exception e)
 		{
 			e.printStackTrace();
