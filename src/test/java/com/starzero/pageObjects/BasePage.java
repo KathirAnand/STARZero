@@ -5,7 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.starzero.pageActions.PageActions;
 
-public class BasePage {
+public class BasePage extends PageActions {
 	
 	protected WebDriver driver;
 	protected PageActions action = new PageActions();

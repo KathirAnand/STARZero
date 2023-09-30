@@ -5,7 +5,7 @@
     <classes>
       <class name="com.starzero.testCases.TC_001_LaunchURL">
         <methods>
-          <include name="openApplicationURL"/>
+          <include name="validateLandingPage"/>
           <include name="lauchBrowser"/>
           <include name="tearDown"/>
         </methods>

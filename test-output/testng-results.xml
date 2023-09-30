@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-24T12:23:23 IST" name="Suite" finished-at="2023-09-24T12:23:51 IST" duration-ms="28081">
+  <suite started-at="2023-09-30T22:49:48 IST" name="Suite" finished-at="2023-09-30T22:50:06 IST" duration-ms="17664">
     <groups>
     </groups>
-    <test started-at="2023-09-24T12:23:23 IST" name="Test" finished-at="2023-09-24T12:23:51 IST" duration-ms="28081">
-      <class name="com.starzero.testCases.TC_001_LaunchURL">
-        <test-method is-config="true" signature="lauchBrowser(java.lang.String)[pri:0, instance:com.starzero.testCases.TC_001_LaunchURL@36916eb0]" started-at="2023-09-24T12:23:23 IST" name="lauchBrowser" finished-at="2023-09-24T12:23:43 IST" duration-ms="19679" status="PASS">
+    <test started-at="2023-09-30T22:49:48 IST" name="Test" finished-at="2023-09-30T22:50:06 IST" duration-ms="17664">
+      <class name="com.starzero.testCases.TC_002_Login">
+        <test-method is-config="true" signature="lauchBrowser(java.lang.String)[pri:0, instance:com.starzero.testCases.TC_002_Login@54a7079e]" started-at="2023-09-30T22:49:48 IST" name="lauchBrowser" finished-at="2023-09-30T22:49:59 IST" duration-ms="10367" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lauchBrowser -->
-        <test-method signature="validateLandingPage()[pri:0, instance:com.starzero.testCases.TC_001_LaunchURL@36916eb0]" started-at="2023-09-24T12:23:43 IST" name="validateLandingPage" finished-at="2023-09-24T12:23:51 IST" duration-ms="7935" status="PASS">
+        <test-method is-config="true" signature="selectCountry()[pri:0, instance:com.starzero.testCases.TC_002_Login@54a7079e]" started-at="2023-09-30T22:49:59 IST" name="selectCountry" finished-at="2023-09-30T22:50:02 IST" duration-ms="2920" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateLandingPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.starzero.testCases.TC_001_LaunchURL@36916eb0]" started-at="2023-09-24T12:23:51 IST" name="tearDown" finished-at="2023-09-24T12:23:51 IST" duration-ms="371" status="PASS">
+        </test-method> <!-- selectCountry -->
+        <test-method signature="successLogin()[pri:0, instance:com.starzero.testCases.TC_002_Login@54a7079e]" started-at="2023-09-30T22:50:02 IST" name="successLogin" finished-at="2023-09-30T22:50:05 IST" duration-ms="3558" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- successLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.starzero.testCases.TC_002_Login@54a7079e]" started-at="2023-09-30T22:50:05 IST" name="tearDown" finished-at="2023-09-30T22:50:06 IST" duration-ms="744" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.starzero.testCases.TC_001_LaunchURL -->
+      </class> <!-- com.starzero.testCases.TC_002_Login -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

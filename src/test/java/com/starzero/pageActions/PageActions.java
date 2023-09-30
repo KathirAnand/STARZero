@@ -1,12 +1,11 @@
 package com.starzero.pageActions;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,11 +16,14 @@ public class PageActions extends ProjectSpecificMethods implements ElementAction
 	
 	
 	public WebDriverWait wait;
+	public static Actions action;
+	private String text = "";
+	private boolean status;
 	/**
 	 * 
 	 * @param element
 	 */
-	public void clickElement(WebElement element,WebDriver driver) {
+	public void clickElement(WebElement element) {
 		try {
 			element.click();
 		}
@@ -29,29 +31,51 @@ public class PageActions extends ProjectSpecificMethods implements ElementAction
 		{
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			js.executeScript("arguments[0].click();", element);
-			ex.printStackTrace();
+//			ex.printStackTrace();
 		}
 		catch(NoSuchElementException ex)
 		{
 			ex.printStackTrace();
+			throw new RuntimeException();
 		}
 		
 	}
 	
-	public void actionClick(WebElement ele,WebDriver driver) throws InterruptedException {
-		String text = "";
+	public void waitAndClick(WebElement element) {
+		try {
+			wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			element.click();
+		}
+		catch(Exception ex) {
+			ex.printStackTrace();
+			throw new RuntimeException();
+		}
+	}
+	
+	public void waitAndJsClick(WebElement element) {
+		try {
+			wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			JavascriptExecutor js = (JavascriptExecutor)driver;
+			js.executeScript("arguments[0].click();", element);
+		}
+		catch(Exception ex) {
+			ex.printStackTrace();
+			throw new RuntimeException();
+		}
+	}
+	
+	public void actionClick(WebElement ele) throws InterruptedException {
+		
 		try {
 			wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 			wait.until(ExpectedConditions.elementToBeClickable(ele));
-			Actions action = new Actions(driver);
+			action = new Actions(driver);
 			text = ele.getText();
 			action.moveToElement(ele).click().build().perform();
-//			reportStep("The Element " + text + " clicked", "pass");
-		} catch (StaleElementReferenceException e) {
-//			reportStep("The Element " + text + " could not be clicked", "fail");
-			throw new RuntimeException();
 		} catch (Exception e) {
-//			reportStep("The Element " + e + " could not be clicked", "fail");
+			e.printStackTrace();
 			throw new RuntimeException();
 		}
 	}
@@ -62,12 +86,35 @@ public class PageActions extends ProjectSpecificMethods implements ElementAction
 	 * @param value
 	 */
 	public void clearAndType(WebElement element, String value) {
-		element.clear();
-		element.sendKeys(value);
+		try {
+			element.clear();
+			element.sendKeys(value);
+		}
+		catch(Exception ex) {
+			ex.printStackTrace();
+		}
+		
 	}
 	
-	public static boolean isDisplayedInUI(WebElement element)
-	{
+	public static boolean isDisplayedInUI(WebElement element){
 		return element.isDisplayed();
+	}
+
+	
+	public boolean isSelected(WebElement element) {
+		status = element.isSelected();
+		return status;
+	}
+	
+	public void findAndClick(List<WebElement> elements, String value) {
+		String text;
+		for(WebElement element:elements) {
+			text = element.getText();
+			if(text.equals(value)) {
+				element.click();
+				logger.info(value + " is clicked");
+				break;
+			}
+		}
 	}
 }

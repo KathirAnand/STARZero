@@ -1,0 +1,3 @@
+22:49:59.214 [main] INFO  com.starzero.testCases.TC_002_Login - http://starzero.inventsoftlabs.in/URL Opened Successfully in chrome browser
+22:50:02.308 [main] INFO  com.starzero.testCases.TC_002_Login - UK is clicked
+22:50:02.308 [main] INFO  com.starzero.testCases.TC_002_Login - UK country is successfully selected

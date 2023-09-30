@@ -1,15 +1,22 @@
 package com.starzero.pageActions;
 
-import org.openqa.selenium.WebDriver;
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 
 public interface ElementActions {
 	
-	/**
-	 * 
-	 * @param element
-	 * @param driver
-	 */
-	public void clickElement(WebElement element,WebDriver driver);
+	
+	public void clearAndType(WebElement element, String value);
+	
+	public void clickElement(WebElement element);
+	
+	public void waitAndClick(WebElement element);
+	
+	public void waitAndJsClick(WebElement element);
+	
+	public void actionClick(WebElement ele)throws InterruptedException;
+	
+	public void findAndClick(List<WebElement> elements, String value);
 
 }

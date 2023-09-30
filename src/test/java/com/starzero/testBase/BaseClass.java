@@ -15,16 +15,18 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
+import com.starzero.helperClass.IndividualPage;
 import com.starzero.pageActions.BrowserActions;
 import com.starzero.utilities.ExtentReportUtility;
 
 public class BaseClass extends ExtentReportUtility implements BrowserActions{
 
 	protected static WebDriver driver;
-	public ResourceBundle rb;
-	public Logger logger;
+	public static ResourceBundle rb;
+	public static Logger logger;
 
 	@BeforeClass(groups = { "smoke" })
 	@Parameters("browser")
@@ -55,6 +57,7 @@ public class BaseClass extends ExtentReportUtility implements BrowserActions{
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(rb.getString("URL"));
+		logger.info(rb.getString("URL")+"URL Opened Successfully in "+browser+" browser");
 		driver.manage().window().maximize();
 
 	}
@@ -62,6 +65,16 @@ public class BaseClass extends ExtentReportUtility implements BrowserActions{
 	@AfterClass
 	public void tearDown() {
 		driver.close();
+	}
+	
+	@BeforeMethod
+	public void selectCountry() throws InterruptedException {
+		String country = "UK";
+		IndividualPage ip = new IndividualPage(driver);
+		ip.selectCountry();
+		ip.clickCountryDropdown();
+		ip.clickCountry(country);
+		logger.info(country+" country is successfully selected");
 	}
 
 }
