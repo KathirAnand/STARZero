@@ -1,3 +1,18 @@
-22:49:59.214 [main] INFO  com.starzero.testCases.TC_002_Login - http://starzero.inventsoftlabs.in/URL Opened Successfully in chrome browser
-22:50:02.308 [main] INFO  com.starzero.testCases.TC_002_Login - UK is clicked
-22:50:02.308 [main] INFO  com.starzero.testCases.TC_002_Login - UK country is successfully selected
+19:05:52.732 [main] INFO  com.starzero.testCases.TC_003_Register - http://starzero.inventsoftlabs.in/URL Opened Successfully in chrome browser
+19:05:55.976 [main] INFO  com.starzero.testCases.TC_003_Register - UK is clicked
+19:05:55.979 [main] INFO  com.starzero.testCases.TC_003_Register - UK country is successfully selected
+19:06:01.741 [main] INFO  com.starzero.testCases.TC_003_Register - Entered first name is Rodger
+19:06:02.180 [main] INFO  com.starzero.testCases.TC_003_Register - Entered lastName is Daugherty
+19:06:02.497 [main] INFO  com.starzero.testCases.TC_003_Register - Entered owner first name isKen
+19:06:03.038 [main] INFO  com.starzero.testCases.TC_003_Register - Entered ownerLastName is Schowalter
+19:06:03.731 [main] INFO  com.starzero.testCases.TC_003_Register - Entered emailId is louie.langworth@hotmail.com
+19:06:04.283 [main] INFO  com.starzero.testCases.TC_003_Register - Entered phoneNumber is 7451295413
+19:20:33.626 [main] INFO  com.starzero.testCases.TC_003_Register - http://starzero.inventsoftlabs.in/URL Opened Successfully in chrome browser
+19:20:38.566 [main] INFO  com.starzero.testCases.TC_003_Register - UK is clicked
+19:20:38.566 [main] INFO  com.starzero.testCases.TC_003_Register - UK country is successfully selected
+19:20:43.729 [main] INFO  com.starzero.testCases.TC_003_Register - Entered first name is Chris
+19:20:44.201 [main] INFO  com.starzero.testCases.TC_003_Register - Entered lastName is Murray
+19:20:44.678 [main] INFO  com.starzero.testCases.TC_003_Register - Entered owner first name isBarrett
+19:20:45.153 [main] INFO  com.starzero.testCases.TC_003_Register - Entered ownerLastName is Stanton
+19:20:45.929 [main] INFO  com.starzero.testCases.TC_003_Register - Entered emailId is tyler.lebsack@yahoo.com
+19:20:46.642 [main] INFO  com.starzero.testCases.TC_003_Register - Entered phoneNumber is 7724918177

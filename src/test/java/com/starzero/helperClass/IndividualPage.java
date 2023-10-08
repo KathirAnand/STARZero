@@ -38,8 +38,14 @@ public class IndividualPage extends IndividualPageObjects {
 		
 	}
 	
-	public void clickSubscribeNowbtn() {
+	public PlansPage clickSubscribeNowbtn() {
+		try {
 			clickElement(subscribeNowbtn);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return new PlansPage(driver);
 	}
 
 }

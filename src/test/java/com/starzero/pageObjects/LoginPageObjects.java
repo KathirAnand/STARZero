@@ -31,7 +31,9 @@ public class LoginPageObjects extends BasePage{
 	@FindBy(xpath = "//span[normalize-space()='Sign up']")
 	protected WebElement signUpLink;
 	
+	@FindBy(xpath = "//p[@class='text-danger text-bold border']")
+	protected WebElement notValidUser;
 	
+	//a[normalize-space()='Journey']
 	
-
 }

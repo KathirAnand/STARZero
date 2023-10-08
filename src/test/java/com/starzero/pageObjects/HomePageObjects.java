@@ -1,4 +1,4 @@
-package com.starzero.pageObjects;
+	package com.starzero.pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,8 +31,23 @@ public class HomePageObjects extends BasePage{
 	
 	@FindBy(xpath="//a[text()='Individual ']")
 	protected WebElement navIndividual;
+
+	
+	@FindBy(xpath="//a[normalize-space()='Journey']")
+	protected WebElement navJourney;
 	
 	
+	@FindBy(xpath="//img[@id='composition-button']")
+	protected WebElement profileIcon;
 	
 	
+	@FindBy(xpath="//li[normalize-space()='Sign Out']")
+	protected WebElement signOut;
+	
+	
+	@FindBy(xpath="//button[normalize-space()='Yes']")
+	protected WebElement signOutYes;
+	
+	@FindBy(xpath="//button[normalize-space()='No']")
+	protected WebElement signOutNo;
 }

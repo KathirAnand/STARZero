@@ -16,6 +16,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
 import com.starzero.helperClass.IndividualPage;
@@ -27,13 +28,19 @@ public class BaseClass extends ExtentReportUtility implements BrowserActions{
 	protected static WebDriver driver;
 	public static ResourceBundle rb;
 	public static Logger logger;
+	public String country;
+	
+	@BeforeSuite
+	public void setPropertiesAndLogger() {
+		rb = ResourceBundle.getBundle("config"); // to get the properties file
+		logger = LogManager.getLogger(this.getClass()); // to initiate the logger
 
+	}
+	
+	
 	@BeforeClass(groups = { "smoke" })
 	@Parameters("browser")
 	public void lauchBrowser(String browser) {
-
-		rb = ResourceBundle.getBundle("config"); // to get the properties file
-		logger = LogManager.getLogger(this.getClass()); // to initiate the logger
 
 		if (browser.equalsIgnoreCase("chrome")) {
 
@@ -67,9 +74,11 @@ public class BaseClass extends ExtentReportUtility implements BrowserActions{
 		driver.close();
 	}
 	
+	
 	@BeforeMethod
-	public void selectCountry() throws InterruptedException {
-		String country = "UK";
+	@Parameters("country")
+	public void selectCountry(String countryXML) throws InterruptedException {
+		this.country = countryXML;
 		IndividualPage ip = new IndividualPage(driver);
 		ip.selectCountry();
 		ip.clickCountryDropdown();

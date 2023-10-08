@@ -46,6 +46,19 @@ public class HomePage extends HomePageObjects{
 		
 	}
 	
+	public void clickJourney() {
+		clickElement(navJourney);
+	}
+	
+	public boolean profileIcon() {
+		return isDisplayedInUI(profileIcon);
+	}
+	public void signOut() {
+		clickElement(profileIcon);
+		clickElement(signOut);
+		clickElement(signOutYes);
+	}
+	
 	
 
 }

@@ -42,5 +42,11 @@ public class LoginPage extends LoginPageObjects{
 		return new IndividualPage(driver);
 	}
 	
+	public boolean notValidUserMessage() {
+		return isDisplayedInUI(notValidUser);
+	}
+	
+	
+	
 	
 }

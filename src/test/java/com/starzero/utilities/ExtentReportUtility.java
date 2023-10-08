@@ -1,6 +1,5 @@
 package com.starzero.utilities;
 
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -13,6 +12,8 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.starzero.pageActions.ProjectSpecificMethods;
+import com.starzero.testBase.FilePaths;
 
 
 public class ExtentReportUtility implements ITestListener {
@@ -24,20 +25,20 @@ public class ExtentReportUtility implements ITestListener {
 	String repName;
 
 	public void onStart(ITestContext testContext) {
-		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());// time stamp
+		String timeStamp = ProjectSpecificMethods.getTimestamp();// time stamp
 		repName = "Test-Report-" + timeStamp + ".html";
 
-		sparkReporter = new ExtentSparkReporter(".\\reports\\" + repName);// specify location of the report
+		sparkReporter = new ExtentSparkReporter(FilePaths.REPORT_HOME + repName);// specify location of the report
 
-		sparkReporter.config().setDocumentTitle("opencart Automation Report"); // Title of report
-		sparkReporter.config().setReportName("opencart Functional Testing"); // name of the report
+		sparkReporter.config().setDocumentTitle("STARZero Automation Report"); // Title of report
+		sparkReporter.config().setReportName("STARZero Functional Testing"); // name of the report
 		sparkReporter.config().setTheme(Theme.DARK);
 
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
-		extent.setSystemInfo("Application", "opencart");
-		extent.setSystemInfo("Module", "Admin");
-		extent.setSystemInfo("Sub Module", "Customers");
+		extent.setSystemInfo("Application", "STARZero");
+		extent.setSystemInfo("Module", "Public");
+		extent.setSystemInfo("Sub Module", "Subscriber");
 		extent.setSystemInfo("Operating System", System.getProperty("os.name"));
 		extent.setSystemInfo("User Name", System.getProperty("user.name"));
 		extent.setSystemInfo("Environemnt", "QA");
@@ -50,10 +51,27 @@ public class ExtentReportUtility implements ITestListener {
 
 	public void onTestFailure(ITestResult result) {
 		test = extent.createTest(result.getName());
+		
+//		WebDriver driver; //to get the baseClass driver (from QAFox)
+//		try {
+//			driver= (WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
+//		} catch (IllegalArgumentException | IllegalAccessException | NoSuchFieldException | SecurityException e) {
+//			e.printStackTrace();
+//		}
+		
+		try {
+			String imgPath = ProjectSpecificMethods.captureScreen(result.getName());
+			test.addScreenCaptureFromPath(imgPath);
+		}catch(Exception ex) {
+			ex.printStackTrace();
+		}
+		
+		
 		test.log(Status.FAIL, "Test Failed");
 		test.log(Status.FAIL, result.getThrowable().getMessage());
 	}
-
+	
+	//to skip the method or test by using the testNG attribute dependsOnMethods={"testMethodName"}-->if provided testMethod is got failed and then the depended method should be skipped
 	public void onTestSkipped(ITestResult result) {
 		test = extent.createTest(result.getName());
 		test.log(Status.SKIP, "Test Skipped");
