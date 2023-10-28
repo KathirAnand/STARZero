@@ -1,18 +1,20 @@
-19:05:52.732 [main] INFO  com.starzero.testCases.TC_003_Register - http://starzero.inventsoftlabs.in/URL Opened Successfully in chrome browser
-19:05:55.976 [main] INFO  com.starzero.testCases.TC_003_Register - UK is clicked
-19:05:55.979 [main] INFO  com.starzero.testCases.TC_003_Register - UK country is successfully selected
-19:06:01.741 [main] INFO  com.starzero.testCases.TC_003_Register - Entered first name is Rodger
-19:06:02.180 [main] INFO  com.starzero.testCases.TC_003_Register - Entered lastName is Daugherty
-19:06:02.497 [main] INFO  com.starzero.testCases.TC_003_Register - Entered owner first name isKen
-19:06:03.038 [main] INFO  com.starzero.testCases.TC_003_Register - Entered ownerLastName is Schowalter
-19:06:03.731 [main] INFO  com.starzero.testCases.TC_003_Register - Entered emailId is louie.langworth@hotmail.com
-19:06:04.283 [main] INFO  com.starzero.testCases.TC_003_Register - Entered phoneNumber is 7451295413
-19:20:33.626 [main] INFO  com.starzero.testCases.TC_003_Register - http://starzero.inventsoftlabs.in/URL Opened Successfully in chrome browser
-19:20:38.566 [main] INFO  com.starzero.testCases.TC_003_Register - UK is clicked
-19:20:38.566 [main] INFO  com.starzero.testCases.TC_003_Register - UK country is successfully selected
-19:20:43.729 [main] INFO  com.starzero.testCases.TC_003_Register - Entered first name is Chris
-19:20:44.201 [main] INFO  com.starzero.testCases.TC_003_Register - Entered lastName is Murray
-19:20:44.678 [main] INFO  com.starzero.testCases.TC_003_Register - Entered owner first name isBarrett
-19:20:45.153 [main] INFO  com.starzero.testCases.TC_003_Register - Entered ownerLastName is Stanton
-19:20:45.929 [main] INFO  com.starzero.testCases.TC_003_Register - Entered emailId is tyler.lebsack@yahoo.com
-19:20:46.642 [main] INFO  com.starzero.testCases.TC_003_Register - Entered phoneNumber is 7724918177
+20:00:45.757 [main] INFO  com.starzero.testCases.TC_004_AddTrip - http://starzero.inventsoftlabs.in/URL Opened Successfully in chrome browser
+20:00:48.241 [main] INFO  com.starzero.testCases.TC_004_AddTrip - UK country is successfully selected
+20:00:49.917 [main] INFO  com.starzero.testCases.TC_004_AddTrip - Login button is clicked
+20:00:50.365 [main] INFO  com.starzero.testCases.TC_004_AddTrip - badrequest@gmail.com is entered
+20:00:50.617 [main] INFO  com.starzero.testCases.TC_004_AddTrip - test1234 is entered
+20:00:50.859 [main] INFO  com.starzero.testCases.TC_004_AddTrip - Privacy policy checkbox is clicked
+20:00:51.039 [main] INFO  com.starzero.testCases.TC_004_AddTrip - Sign In button is clicked
+20:00:52.874 [main] INFO  com.starzero.testCases.TC_004_AddTrip - Journey is clicked
+20:00:53.628 [main] INFO  com.starzero.testCases.TC_004_AddTrip - Record New Trip button is clicked
+20:00:53.910 [main] INFO  com.starzero.testCases.TC_004_AddTrip - Odometer Reading is entered as 250
+20:00:54.144 [main] INFO  com.starzero.testCases.TC_004_AddTrip - Image uploaded successfully
+20:00:54.324 [main] INFO  com.starzero.testCases.TC_004_AddTrip - Submit button is clicked
+15:47:07.654 [main] INFO  com.starzero.testCases.TC_003_Register - http://starzero.inventsoftlabs.in/URL Opened Successfully in chrome browser
+15:47:10.107 [main] INFO  com.starzero.testCases.TC_003_Register - UK country is successfully selected
+15:47:13.769 [main] INFO  com.starzero.testCases.TC_003_Register - Entered first name is Jackie
+15:47:14.128 [main] INFO  com.starzero.testCases.TC_003_Register - Entered lastName is Sanford
+15:47:14.441 [main] INFO  com.starzero.testCases.TC_003_Register - Entered owner first name isCecil
+15:47:14.748 [main] INFO  com.starzero.testCases.TC_003_Register - Entered ownerLastName is Dare
+15:47:15.296 [main] INFO  com.starzero.testCases.TC_003_Register - Entered emailId is tatiana.goyette@gmail.com
+15:47:15.676 [main] INFO  com.starzero.testCases.TC_003_Register - Entered phoneNumber is 7674480922

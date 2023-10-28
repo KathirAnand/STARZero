@@ -66,7 +66,7 @@ public class PageActions extends ProjectSpecificMethods implements ElementAction
 		}
 	}
 	
-	public void actionClick(WebElement ele) throws InterruptedException {
+	public void actionClick(WebElement ele) {
 		
 		try {
 			wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -96,6 +96,17 @@ public class PageActions extends ProjectSpecificMethods implements ElementAction
 		
 	}
 	
+	public void clearAndType(WebElement element, int value) {
+		try {
+			element.clear();
+			element.sendKeys(Integer.toString(value));
+		}
+		catch(Exception ex) {
+			ex.printStackTrace();
+		}
+		
+	}
+	
 	public static boolean isDisplayedInUI(WebElement element){
 		return element.isDisplayed();
 	}
@@ -112,7 +123,7 @@ public class PageActions extends ProjectSpecificMethods implements ElementAction
 			text = element.getText();
 			if(text.equals(value)) {
 				element.click();
-				logger.info(value + " is clicked");
+//				logger.info(value + " is clicked");
 				break;
 			}
 		}

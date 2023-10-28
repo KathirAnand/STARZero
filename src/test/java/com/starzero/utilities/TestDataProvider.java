@@ -1,5 +1,6 @@
 package com.starzero.utilities;
 
+
 public class TestDataProvider {
 	
 	public static  Object[][] getTestData(String filePath,String sheetName) throws Exception{
@@ -34,4 +35,22 @@ public class TestDataProvider {
 		}
 		return data;
 	}
+	
+	public static void setTestData(String filePath,String sheetName,String [] data) throws Exception {
+		ExcelUtility read=new ExcelUtility(filePath);
+		int rowCount=read.getRowCount(sheetName)+1;
+//		System.out.println(rowCount);
+		for(int i=0;i<data.length;i++) {
+//			System.out.println(data[i]);
+			read.setCellData(sheetName, rowCount, i, data[i]);
+		}
+		
+	}
+	
+//	public static void main(String[] args) throws Exception {
+//		String [] val=new String [] {"val1","val2","val3"};
+//		String sheetName="Sheet1";
+//		setTestData(FilePaths.REGISTERED_DATAS,sheetName,val);
+//		
+//	}
 }

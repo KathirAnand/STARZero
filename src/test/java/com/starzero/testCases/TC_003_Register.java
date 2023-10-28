@@ -6,6 +6,7 @@ import com.starzero.helperClass.IndividualPage;
 import com.starzero.helperClass.PlansPage;
 import com.starzero.pageActions.ProjectSpecificMethods;
 import com.starzero.testBase.BaseClass;
+import com.starzero.testDatas.SignUp_GeneratedData;
 
 public class TC_003_Register extends BaseClass {
 	
@@ -19,8 +20,10 @@ public class TC_003_Register extends BaseClass {
 	static String password = "test1234";
 	
 	@Test
-	public void UK_Registration() throws InterruptedException {
+	public void UK_Registration() throws Exception {
 		IndividualPage individualPage = new IndividualPage(driver);
+		String country = "UK";
+		selectCountry(country);
 		PlansPage plansPage = individualPage.clickSubscribeNowbtn()
 		.selectPlanBreezeBasic()
 		.setVehicleRegistrationNumber(regNo)
@@ -35,6 +38,8 @@ public class TC_003_Register extends BaseClass {
 		.setPassword(password)
 		.clickTermsOfUseCheckBox();
 		plansPage.clickSubscribeBtn();
+		
+		SignUp_GeneratedData.setGeneratedDataIntoExcel(new String [] {regNo,firstName,lastName,ownerFirstName,ownerLastName,emailId,password,phoneNumber}, country);
 		
 	}
 	

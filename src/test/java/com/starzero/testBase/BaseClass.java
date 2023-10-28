@@ -75,9 +75,9 @@ public class BaseClass extends ExtentReportUtility implements BrowserActions{
 	}
 	
 	
-	@BeforeMethod
-	@Parameters("country")
-	public void selectCountry(String countryXML) throws InterruptedException {
+//	@BeforeMethod
+//	@Parameters("country")
+	public void selectCountry(String countryXML) {
 		this.country = countryXML;
 		IndividualPage ip = new IndividualPage(driver);
 		ip.selectCountry();

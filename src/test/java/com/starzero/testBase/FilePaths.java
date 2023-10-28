@@ -10,6 +10,10 @@ public class FilePaths {
 	public static final String EXTENTREPORT_FILE=REPORT_HOME+"test-output\\FailedTestsScreenshots\\";
 	public static final String SCREENSHOT_HOME=USER_HOME+"screenshots"+File.separator;
 	
+	public static final String IMG_PATH=SCREENSHOT_HOME+"odometer.jpg";
+	public static final String SIGNIN_DATAS = TESTDATA_HOME + "SignIn_Datas.csv";
+	public static final String 	REGISTERED_DATAS = TESTDATA_HOME + "register_generatedData.xlsx";
+	
 //	public static void main(String[] args) {
 //		System.out.println(USER_HOME);
 //		System.out.println(TESTDATA_HOME);

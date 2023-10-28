@@ -26,10 +26,17 @@ public class OrderSummaryPageObjects extends BasePage{
 	//p[normalize-space()='Fuel Type']
 	//button[@type='submit']
 	
-
-	//input[@placeholder='Card number']
-	//input[@placeholder='MM / YY']
-	//input[@placeholder='CVC']
-	//button[@id='submit']
+	@FindBy(xpath="//input[@placeholder='Card number']")
+	protected WebElement cardNumberInputField;
+	
+	@FindBy(xpath="//input[@placeholder='MM / YY']")
+	protected WebElement monthInputField;
+	
+	@FindBy(xpath="//input[@placeholder='CVC']")
+	protected WebElement cvcInputField;
+	
+	@FindBy(xpath="//button[@id='submit']")
+	protected WebElement payBtn;
+	
 
 }

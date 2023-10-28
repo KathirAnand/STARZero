@@ -6,7 +6,7 @@
 	</listeners>
 	<test thread-count="5" name="Test">
 		<parameter name="browser" value="chrome"></parameter>
-		<parameter name="country" value="UK"></parameter>
+<!--		<parameter name="country" value="UK"></parameter> -->
 		<classes>
 			<class name="com.starzero.testCases.TC_003_Register" />
 		</classes>

@@ -5,17 +5,16 @@
     <listener class-name="com.starzero.utilities.ExtentReportUtility"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
-    <parameter name="country" value="UK"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.starzero.testCases.TC_003_Register">
+      <class name="com.starzero.testCases.TC_004_AddTrip">
         <methods>
-          <include name="India_Registration"/>
+          <include name="addTrip_UK"/>
+          <include name="setPropertiesAndLogger"/>
           <include name="lauchBrowser"/>
           <include name="tearDown"/>
-          <include name="selectCountry"/>
         </methods>
-      </class> <!-- com.starzero.testCases.TC_003_Register -->
+      </class> <!-- com.starzero.testCases.TC_004_AddTrip -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

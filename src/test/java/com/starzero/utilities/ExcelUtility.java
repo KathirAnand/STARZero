@@ -3,6 +3,8 @@ package com.starzero.utilities;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -11,6 +13,7 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 
 public class ExcelUtility {
 	
@@ -40,6 +43,7 @@ public class ExcelUtility {
 		fi=new FileInputStream(path);
 		workbook=new XSSFWorkbook(fi);
 		sheet=workbook.getSheet(sheetName);
+//		sheet=workbook.getSheetAt(0);
 		int rowcount=sheet.getLastRowNum();
 		workbook.close();
 		fi.close();
@@ -120,12 +124,18 @@ public class ExcelUtility {
 		fi=new FileInputStream(path);
 		workbook=new XSSFWorkbook(fi);
 			
-		if(workbook.getSheetIndex(sheetName)==-1) // If sheet not exists then create new Sheet
+		if(workbook.getSheetIndex(sheetName)==-1) {
 			workbook.createSheet(sheetName);
+			// If sheet not exists then create new Sheet
+		}
+		
 		sheet=workbook.getSheet(sheetName);
-					
-		if(sheet.getRow(rownum)==null)   // If row not exists then create new Row
-				sheet.createRow(rownum);
+		
+		if(sheet.getRow(rownum)==null) {
+			sheet.createRow(rownum);
+			// If row not exists then create new Row
+		}
+	
 		row=sheet.getRow(rownum);
 		
 		cell=row.createCell(colnum);
@@ -137,5 +147,21 @@ public class ExcelUtility {
 		fo.close();
 	}
 	
+//	public static void setCellValue(String firstName,String lastName) throws IOException {
+//		FileWriter writer = new FileWriter(FilePaths.SIGNIN_DATAS);
+//		writer.append("FirsName,LastName,OwnerFirstName,OwnerLastName,EamilId,Password,PhoneNumber \n");
+//		writer.append("Sabari,Vasan,Jocker,Saba,jocker@gmail.com,test1234,8879876987 \n");
+//		writer.append("gopi,Vasan,Jocker,gops,jocker@gmail.com,test1234,8879876987");
+//		writer.append(firstName+","+lastName);
+//		
+//		writer.close();
+//		System.out.println("File Created at"+FilePaths.SIGNIN_DATAS);
+//		
+//	}
+//	public static void main(String[] args) throws IOException {
+//		String fn="joseph";
+//		String ln="jackob";
+//		setCellValue(fn,ln);
+//	}
 
 }

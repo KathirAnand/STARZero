@@ -208,11 +208,12 @@ public class PlansPage extends PlansPageObjects {
 		return this;
 	}
 
-	public void clickSubscribeBtn() {
+	public OrderSummaryPage clickSubscribeBtn() {
 		try {
 			clickElement(subscribeBtn);
 		} catch (Error ex) {
 			throw new RuntimeErrorException(ex);
 		}
+		return new OrderSummaryPage(driver);
 	}
 }

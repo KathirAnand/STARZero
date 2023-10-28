@@ -13,42 +13,48 @@ public class TC_002_Login extends BaseClass{
 	
 	LoginPage loginPage;
 	IndividualPage ip;
+	HomePage home;
 	
-	@Ignore
-	@Test
+	
+	@Test(priority = 1)
 	public void successLogin() {
-		
-		HomePage home = new HomePage(driver);
-		loginPage = home.clickLoginBtn();
-		loginPage.setEmail(rb.getString("UKEMAILID"));
-		loginPage.setPassword(rb.getString("ALLPASSWORD"));
-		loginPage.clickCheckBox();
-		ip =loginPage.clickSignInBtn();
+		String country = "UK";
+		selectCountry(country);
+		 new HomePage(driver)
+		.clickLoginBtn()
+		.setEmail(rb.getString("UKEMAILID"))
+		.setPassword(rb.getString("ALLPASSWORD"))
+		.clickCheckBox()
+		.clickSignInBtn();
 	}
 	
 	
-	@Test(dataProvider = "ukLoginDatas", dataProviderClass = LoginTestDatas.class ,groups = {"TDD"})
+	@Test(priority = 2,dataProvider = "ukLoginDatas", dataProviderClass = LoginTestDatas.class ,groups = {"TDD"})
 	public void LoginTDD(String country, String emailID,String password,String expected) throws InterruptedException {
 		selectCountry(country);
-		HomePage home = new HomePage(driver);
-		loginPage = home.clickLoginBtn();
-		loginPage.setEmail(emailID);
-		loginPage.setPassword(password);
-		loginPage.clickCheckBox();
-		ip =loginPage.clickSignInBtn();
+		home = new HomePage(driver);
+		loginPage = home.clickLoginBtn()
+		.setEmail(emailID)
+		.setPassword(password)
+		.clickCheckBox();
+		ip = loginPage.clickSignInBtn();
 		if(expected.equalsIgnoreCase("invalid")) {
 			if(loginPage.notValidUserMessage()) {
-				
+				logger.info("Invalid user and notValid user message is displayed");
 			}
 			else {
+				logger.info("Invalid user is getting logged into the application and notValid user message is not displayed");
 				Assert.fail();
 			}
 		}
 		else if(expected.equalsIgnoreCase("valid")) {
 			if(home.profileIcon()) {
+				logger.info("Valid user is getting logged into the applications");
 				home.signOut();
+				logger.info("SignOut is clicked");
 			}
 			else {
+				logger.info("Valid user is not getting logged into the applications");
 				Assert.fail();
 			}
 			

@@ -16,7 +16,7 @@ public class IndividualPage extends IndividualPageObjects {
 		clickElement(countryDropdown);
 	}
 	
-	public void clickCountryDropdown() throws InterruptedException {
+	public void clickCountryDropdown()  {
 		actionClick(dropdown);
 	}
 	

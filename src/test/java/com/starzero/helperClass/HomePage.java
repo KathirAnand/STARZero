@@ -32,22 +32,31 @@ public class HomePage extends HomePageObjects{
 	
 	public AboutUsPageObjects clickAboutUs() {
 		clickElement(navAboutUs);
+		logger.info("About Us is clicked");
 		return new AboutUsPageObjects(driver);
 	}
 	
 	public LoginPage clickLoginBtn() {
 		clickElement(login);
+		logger.info("Login button is clicked");
 		return new LoginPage(driver);
 	}
 	
 	public ContactUsPageObjects clickContactUs() {
 		clickElement(navContactUs);
+		logger.info("Contact Us is clicked");
 		return new ContactUsPageObjects(driver);
 		
 	}
 	
-	public void clickJourney() {
-		clickElement(navJourney);
+	public JourneyPage clickJourney() {
+		try {
+			clickElement(navJourney);
+			logger.info("Journey is clicked");
+		}catch(Exception ex) {
+			ex.printStackTrace();
+		}
+		return new JourneyPage(driver);
 	}
 	
 	public boolean profileIcon() {
