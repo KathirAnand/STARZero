@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-28T15:46:53 IST" name="Suite" finished-at="2023-10-28T15:47:20 IST" duration-ms="27135">
+  <suite started-at="2023-10-29T16:47:30 IST" name="Suite" finished-at="2023-10-29T16:48:28 IST" duration-ms="58180">
     <groups>
     </groups>
-    <test started-at="2023-10-28T15:46:53 IST" name="Test" finished-at="2023-10-28T15:47:20 IST" duration-ms="27135">
-      <class name="com.starzero.testCases.TC_003_Register">
-        <test-method is-config="true" signature="setPropertiesAndLogger()[pri:0, instance:com.starzero.testCases.TC_003_Register@16576a6]" started-at="2023-10-28T15:46:51 IST" name="setPropertiesAndLogger" finished-at="2023-10-28T15:46:53 IST" duration-ms="2428" status="PASS">
+    <test started-at="2023-10-29T16:47:30 IST" name="Test" finished-at="2023-10-29T16:48:28 IST" duration-ms="58180">
+      <class name="com.starzero.testCases.TC_005_LoginAndSubscribe">
+        <test-method is-config="true" signature="setPropertiesAndLogger()[pri:0, instance:com.starzero.testCases.TC_005_LoginAndSubscribe@2d710f1a]" started-at="2023-10-29T16:47:26 IST" name="setPropertiesAndLogger" finished-at="2023-10-29T16:47:30 IST" duration-ms="4375" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setPropertiesAndLogger -->
-        <test-method is-config="true" signature="lauchBrowser(java.lang.String)[pri:0, instance:com.starzero.testCases.TC_003_Register@16576a6]" started-at="2023-10-28T15:46:54 IST" name="lauchBrowser" finished-at="2023-10-28T15:47:07 IST" duration-ms="13615" status="PASS">
+        <test-method is-config="true" signature="lauchBrowser(java.lang.String)[pri:0, instance:com.starzero.testCases.TC_005_LoginAndSubscribe@2d710f1a]" started-at="2023-10-29T16:47:32 IST" name="lauchBrowser" finished-at="2023-10-29T16:47:44 IST" duration-ms="12144" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,15 +22,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lauchBrowser -->
-        <test-method signature="UK_Registration()[pri:0, instance:com.starzero.testCases.TC_003_Register@16576a6]" started-at="2023-10-28T15:47:07 IST" name="UK_Registration" finished-at="2023-10-28T15:47:20 IST" duration-ms="12223" status="PASS">
+        <test-method signature="loginAndSubscribe()[pri:0, instance:com.starzero.testCases.TC_005_LoginAndSubscribe@2d710f1a]" started-at="2023-10-29T16:47:44 IST" name="loginAndSubscribe" finished-at="2023-10-29T16:48:27 IST" duration-ms="42937" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UK_Registration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.starzero.testCases.TC_003_Register@16576a6]" started-at="2023-10-28T15:47:20 IST" name="tearDown" finished-at="2023-10-28T15:47:20 IST" duration-ms="632" status="PASS">
+        </test-method> <!-- loginAndSubscribe -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.starzero.testCases.TC_005_LoginAndSubscribe@2d710f1a]" started-at="2023-10-29T16:48:27 IST" name="tearDown" finished-at="2023-10-29T16:48:28 IST" duration-ms="711" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.starzero.testCases.TC_003_Register -->
+      </class> <!-- com.starzero.testCases.TC_005_LoginAndSubscribe -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

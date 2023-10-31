@@ -49,6 +49,12 @@ public class LoginPage extends LoginPageObjects{
 		return new IndividualPage(driver);
 	}
 	
+	public OrderSummaryPage clickSignIn() throws InterruptedException {
+		clickElement(signInBtn);
+		logger.info("Sign In button is clicked");
+		Thread.sleep(5000);
+		return new OrderSummaryPage(driver);
+	}
 	public boolean notValidUserMessage() {
 		return isDisplayedInUI(notValidUser);
 	}

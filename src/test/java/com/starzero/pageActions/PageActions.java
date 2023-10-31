@@ -9,6 +9,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.openqa.selenium.interactions.Actions;
 
 
@@ -96,6 +97,15 @@ public class PageActions extends ProjectSpecificMethods implements ElementAction
 		
 	}
 	
+	public void jsSendkey(WebElement ele,String value) {
+		try {
+			JavascriptExecutor js = (JavascriptExecutor)driver;
+			js.executeScript("arguments[0].setAttribute('value', '" + value +"')", ele);
+		}catch(NoSuchElementException ex) {
+			Assert.fail();
+			ex.printStackTrace();
+		}
+	}
 	public void clearAndType(WebElement element, int value) {
 		try {
 			element.clear();

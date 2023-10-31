@@ -21,10 +21,10 @@ public class TC_003_Register extends BaseClass {
 	
 	@Test
 	public void UK_Registration() throws Exception {
-		IndividualPage individualPage = new IndividualPage(driver);
 		String country = "UK";
 		selectCountry(country);
-		PlansPage plansPage = individualPage.clickSubscribeNowbtn()
+		new IndividualPage(driver)
+		.clickSubscribeNowbtn()
 		.selectPlanBreezeBasic()
 		.setVehicleRegistrationNumber(regNo)
 		.clickFindMyCar()
@@ -36,10 +36,19 @@ public class TC_003_Register extends BaseClass {
 		.setEmail(emailId)
 		.setPhoneNumber(phoneNumber)
 		.setPassword(password)
-		.clickTermsOfUseCheckBox();
-		plansPage.clickSubscribeBtn();
-		
-		SignUp_GeneratedData.setGeneratedDataIntoExcel(new String [] {regNo,firstName,lastName,ownerFirstName,ownerLastName,emailId,password,phoneNumber}, country);
+		.clickTermsOfUseCheckBox()
+		.clickSubscribeBtn()
+		.setRegisterDataIntoExcel(new String [] {regNo,firstName,lastName,ownerFirstName,ownerLastName,emailId,password,phoneNumber}, country)
+		.clickSubscribeNowBtn()
+		.setCardNumber(rb.getString("CARDNUMBER"))
+		.setCardExpiryMonth(rb.getString("EXPIRYMONTH"))
+		.setCardCVC(rb.getString("CVC"))
+		.clickPayBtn()
+		.waitAndRedirect()
+		.setEmail(emailId)
+		.setPassword(password)
+		.clickCheckBox()
+		.clickSignInBtn();
 		
 	}
 	

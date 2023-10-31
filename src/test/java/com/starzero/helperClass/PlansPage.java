@@ -207,7 +207,7 @@ public class PlansPage extends PlansPageObjects {
 		}
 		return this;
 	}
-
+	
 	public OrderSummaryPage clickSubscribeBtn() {
 		try {
 			clickElement(subscribeBtn);

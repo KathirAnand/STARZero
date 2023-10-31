@@ -18,3 +18,40 @@
 15:47:14.748 [main] INFO  com.starzero.testCases.TC_003_Register - Entered ownerLastName is Dare
 15:47:15.296 [main] INFO  com.starzero.testCases.TC_003_Register - Entered emailId is tatiana.goyette@gmail.com
 15:47:15.676 [main] INFO  com.starzero.testCases.TC_003_Register - Entered phoneNumber is 7674480922
+16:01:41.386 [main] INFO  com.starzero.testCases.TC_003_Register - http://starzero.inventsoftlabs.in/URL Opened Successfully in chrome browser
+16:01:44.429 [main] INFO  com.starzero.testCases.TC_003_Register - UK country is successfully selected
+16:01:48.737 [main] INFO  com.starzero.testCases.TC_003_Register - Entered first name is Alyson
+16:01:49.355 [main] INFO  com.starzero.testCases.TC_003_Register - Entered lastName is Schoen
+16:01:49.790 [main] INFO  com.starzero.testCases.TC_003_Register - Entered owner first name isDrew
+16:01:50.233 [main] INFO  com.starzero.testCases.TC_003_Register - Entered ownerLastName is Goodwin
+16:01:51.129 [main] INFO  com.starzero.testCases.TC_003_Register - Entered emailId is annamaria.oconnell@gmail.com
+16:01:51.751 [main] INFO  com.starzero.testCases.TC_003_Register - Entered phoneNumber is 8661552742
+16:25:27.932 [main] INFO  com.starzero.testCases.TC_003_Register - http://starzero.inventsoftlabs.in/URL Opened Successfully in chrome browser
+16:25:31.067 [main] INFO  com.starzero.testCases.TC_003_Register - UK country is successfully selected
+16:25:35.706 [main] INFO  com.starzero.testCases.TC_003_Register - Entered first name is Pasquale
+16:25:36.298 [main] INFO  com.starzero.testCases.TC_003_Register - Entered lastName is Johnston
+16:25:36.744 [main] INFO  com.starzero.testCases.TC_003_Register - Entered owner first name isCarola
+16:25:37.145 [main] INFO  com.starzero.testCases.TC_003_Register - Entered ownerLastName is Wyman
+16:25:38.187 [main] INFO  com.starzero.testCases.TC_003_Register - Entered emailId is kareem.denesik@hotmail.com
+16:25:38.745 [main] INFO  com.starzero.testCases.TC_003_Register - Entered phoneNumber is 7043203860
+16:33:28.441 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - http://starzero.inventsoftlabs.in/URL Opened Successfully in chrome browser
+16:33:32.249 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - UK country is successfully selected
+16:33:36.579 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - Login button is clicked
+16:33:37.123 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - kareem.denesik@hotmail.com is entered
+16:33:37.556 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - test1234 is entered
+16:33:37.882 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - Privacy policy checkbox is clicked
+16:33:38.150 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - Sign In button is clicked
+16:37:55.294 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - http://starzero.inventsoftlabs.in/URL Opened Successfully in chrome browser
+16:37:58.138 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - UK country is successfully selected
+16:38:04.142 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - Login button is clicked
+16:38:04.899 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - kareem.denesik@hotmail.com is entered
+16:38:05.249 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - test1234 is entered
+16:38:05.502 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - Privacy policy checkbox is clicked
+16:38:05.768 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - Sign In button is clicked
+16:47:44.652 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - http://starzero.inventsoftlabs.in/URL Opened Successfully in chrome browser
+16:47:47.562 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - UK country is successfully selected
+16:47:49.630 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - Login button is clicked
+16:47:50.116 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - kareem.denesik@hotmail.com is entered
+16:47:50.560 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - test1234 is entered
+16:47:50.819 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - Privacy policy checkbox is clicked
+16:47:51.058 [main] INFO  com.starzero.testCases.TC_005_LoginAndSubscribe - Sign In button is clicked

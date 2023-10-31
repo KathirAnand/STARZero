@@ -7,14 +7,14 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.starzero.testCases.TC_004_AddTrip">
+      <class name="com.starzero.testCases.TC_005_LoginAndSubscribe">
         <methods>
-          <include name="addTrip_UK"/>
           <include name="setPropertiesAndLogger"/>
+          <include name="loginAndSubscribe"/>
           <include name="lauchBrowser"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.starzero.testCases.TC_004_AddTrip -->
+      </class> <!-- com.starzero.testCases.TC_005_LoginAndSubscribe -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
